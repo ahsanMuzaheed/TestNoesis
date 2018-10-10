@@ -1,0 +1,4 @@
+[submodule "Plugins/NoesisGUI"]
+	path = Plugins/NoesisGUI
+	url = https://github.com/jashking/NoesisGUI.git
+	branch = develop
