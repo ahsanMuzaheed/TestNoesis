@@ -1,0 +1,19 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{6908BE16-4D94-C938-4E39-D98AC80EDED9}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "TestNoesis",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "NoesisGUI",
+			"Enabled": true
+		}
+	]
+}

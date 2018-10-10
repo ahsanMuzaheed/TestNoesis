@@ -30,3 +30,14 @@
 *.exe
 *.out
 *.app
+
+/*.sln
+bin/
+obj/
+
+.vs/
+Binaries/
+Intermediate/
+
+/DerivedDataCache
+/Saved
