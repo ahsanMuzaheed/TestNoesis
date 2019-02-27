@@ -42,3 +42,4 @@ Intermediate/
 /DerivedDataCache
 /Saved
 Build/**/FileOpenOrder/
+*.xcworkspace/

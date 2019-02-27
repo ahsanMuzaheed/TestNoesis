@@ -6,7 +6,41 @@
         xmlns:local="clr-namespace:HelloWorld"
         mc:Ignorable="d"
         Height="450" Width="800" Background="#FF124C7A">
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="Green"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="Yellow"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <ControlTemplate x:Key="ButtonTemplate" TargetType="{x:Type Button}">
+            <Grid>
+                <Ellipse x:Name="Circle" Stroke="{TemplateBinding BorderBrush}" Fill="{TemplateBinding Background}"/>
+                <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="Circle" Property="Stroke" Value="Red"/>
+                    <Setter TargetName="Circle" Property="Fill" Value="Pink"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="Circle" Property="Stroke" Value="Green"/>
+                    <Setter TargetName="Circle" Property="Fill" Value="PaleGreen"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="Background" Value="Silver"/>
+            <Setter Property="Template" Value="{StaticResource ButtonTemplate}"/>
+        </Style>
+    </Window.Resources>
     <Grid>
-        <Button Width="100" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center">Hello World</Button>
+        <Button Width="100" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock>Hello World</TextBlock>
+        </Button>
     </Grid>
 </Window>
